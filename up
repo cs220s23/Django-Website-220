@@ -1,0 +1,4 @@
+# launch redis first because the other containers depend on it
+docker run -d --network django --name redis -v $(pwd)/data:/data redis 
+docker run -d --network django --name webite website
+docker run -d --network django -p 80:80 --name server server

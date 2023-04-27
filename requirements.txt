@@ -1,0 +1,5 @@
+django
+redis
+django-redis
+gunicorn
+mysql.connector
