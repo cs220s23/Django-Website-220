@@ -11,6 +11,9 @@ def main():
     cursor, connection = connectToMySQL()
     print("State, Capitol, Latitude, Longitude")
     cursor.execute("USE Info;")
+    selectAll(cursor, connection)
+
+def selectAll(cursor, connection):
     cursor.execute("SELECT * FROM states;")
     result = cursor.fetchone()
     while result is not None:
