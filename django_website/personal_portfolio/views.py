@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from projects.models import Project
 from django.core.cache import caches
-##from access. import query
+from  access import query
 
 # Create your views here.
 
@@ -14,7 +14,7 @@ def form_submission(request):
     message = None
     if request.method == 'POST':
         message = request.POST.get('message')
-    return render(request, 'data.html', {'message': message})
+    return render(request, 'data.html', {'message': access(message)})
 
 
 def project_index(request):
