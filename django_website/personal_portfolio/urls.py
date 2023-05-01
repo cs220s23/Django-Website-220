@@ -21,7 +21,7 @@ from .views import my_view
 urlpatterns = [
     path('', include('hello_world.urls')),
     path('data/',my_view, name='my_view'),
-    path('form/',form_submission,name='form_submission'),
+    path('form/', form_submission, name='form_submission'),
 
 ]
 
