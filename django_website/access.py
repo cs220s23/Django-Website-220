@@ -12,7 +12,7 @@ def query(term):
     cursor.execute("USE Info;")
     sql = "SELECT * FROM states WHERE State = '" + term +"';"
     cursor.execute(sql)
-    return cursor.fetchone()
+    return cursor.fetchall()
 
 
 

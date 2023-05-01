@@ -2,7 +2,7 @@ import mysql.connector
 
 
 def connectToMySQL():
-    cnx = mysql.connector.connect(password = 'pass', user='user')
+    cnx = mysql.connector.connect(password = 'pass', user='user',host='localhost',auth_plugin='mysql_native_password')
     cursor = cnx.cursor()
     return cursor, cnx
 
