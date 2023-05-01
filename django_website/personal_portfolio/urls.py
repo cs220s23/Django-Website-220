@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import my_view
+from .views import my_view, form_submission
 
 urlpatterns = [
-    path('data/', my_view, name='my_view'),
+    path('', include('hello_world.urls')),
+    path('data/',my_view, name='my_view'),
     path('form/', form_submission, name='form_submission'),
+
 ]
+
