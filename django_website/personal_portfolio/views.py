@@ -14,7 +14,7 @@ def form_submission(request):
     message = ""
     if request.method == 'POST':
         message = query(message)
-    return render(request, 'data.html', {'message': (query(message)})
+    return render(request, 'data.html', {'message': (query(message)}
 
 
 def project_index(request):
