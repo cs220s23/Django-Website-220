@@ -14,8 +14,6 @@ def form_submission(request):
     message = ""
     if request.method == 'POST':
         message = query(message)
-    else:
-            message = ""
     return render(request, 'data.html', {'message': message})
 
 
