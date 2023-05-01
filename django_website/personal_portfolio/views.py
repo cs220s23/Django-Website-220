@@ -13,8 +13,10 @@ def my_view(request):
 def form_submission(request):
     message = None
     if request.method == 'POST':
-        message = request.POST.get('message')
-    return render(request, 'data.html', {'message': query(message)})
+        message = query(message)
+    else:
+            message = ""
+    return render(request, 'data.html', {'message': message})
 
 
 def project_index(request):
