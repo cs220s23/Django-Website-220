@@ -7,7 +7,7 @@ from access import query
 
 def my_view(request):
     result = query("New York")
-    return render(request, "index.html",{'result' : result}
+    return render(request, "index.html",{'result' : result})
     
 
 
