@@ -3,4 +3,4 @@ redis
 django-redis
 gunicorn
 mysql.connector
-django-request
+requests
