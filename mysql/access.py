@@ -11,7 +11,9 @@ def query(term):
     cursor, connection = connectToMySQL()
     cursor.execute("USE Info;")
     sql = "SELECT * FROM states WHERE State = '" + term +"';"
-    print(sql)
+    cursor.execute(sql)
+    return cursor.fetchone()
+
 
 
 def main():
