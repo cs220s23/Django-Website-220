@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import views
+
 
 urlpatterns = [
     path('', include('hello_world.urls')),
+    path('data/',my_view, name='my_view'),
+
 ]
 
