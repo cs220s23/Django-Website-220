@@ -28,6 +28,7 @@ def insertData(cursor):
     infile = open("states.txt", "r")
     header = infile.readline() 
     for line in infile:
+        print(line)
         sql = ""
         line = line.strip()
         record = line.split(",")
