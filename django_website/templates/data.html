@@ -1,9 +1,9 @@
-<h1>Enter a message:</h1>
+<h1>Enter a state:</h1>
 <form method="post">
   {% csrf_token %}
   <input type="text" name="message">
   <button type="submit">Submit</button>
 </form>
 {% if message %}
-  <p>You entered: {{ message }}</p>
+  <p>Heres the info we have on that state: {{ message }}</p>
 {% endif %}
