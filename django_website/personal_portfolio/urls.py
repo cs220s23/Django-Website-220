@@ -22,7 +22,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include('hello_world.urls')),
-    url(r'^search/', include('search.urls', namespace='search')),
 ]
 
 if settings.DEBUG:
