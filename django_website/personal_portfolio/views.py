@@ -5,7 +5,7 @@ from access import query
 
 # Create your views here.
 
-def my_view(request)
+def my_view(request):
     result = query("New York")
     return render(request, "index.html",{'result' : result}
     
