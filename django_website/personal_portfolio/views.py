@@ -11,7 +11,7 @@ def my_view(request):
     
 
 def form_submission(request):
-    message = None
+    message = ""
     if request.method == 'POST':
         message = query(message)
     else:
