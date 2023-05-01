@@ -18,7 +18,7 @@ def makeTable(cursor):
     line = infile.readline()
     line = line.strip()
     fields = line.split(",")
-    sql = "CREATE TABLE states (" + fields[0] + " VARCHAR(20), " + fields[1] + " VARCHAR(20), " + fields[2] + " INT);"
+    sql = "CREATE TABLE states (" + fields[0] + " VARCHAR(20), " + fields[1] + " VARCHAR(20), " + fields[2] + " INT, " + fields[3] + " INT);"
     print(sql)
     cursor.execute(sql)
     infile.close()
@@ -36,6 +36,8 @@ def insertData(cursor):
         data = "'" + record[0] + "', "
         data += "'" + record[1] + "', "
         data += "'" + record[2] + "'"
+        data += "'" + record[3] + "'"
+
   
         sql = "INSERT INTO states VALUES (" + data + ");"
         cursor.execute(sql)

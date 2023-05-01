@@ -9,12 +9,12 @@ def connectToMySQL():
 def main():
     connectToMySQL()
     cursor, connection = connectToMySQL()
-    print("State, Capitol, Population")
+    print("State, Capitol, Latitude, Longitude")
     cursor.execute("USE Info;")
     cursor.execute("SELECT * FROM states;")
     result = cursor.fetchone()
     while result is not None:
-        print(result[0],result[1],result[2], sep=",")
+        print(result[0],result[1],result[2],result[3], sep=",")
         result = cursor.fetchone()
 
         
