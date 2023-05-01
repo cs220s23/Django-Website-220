@@ -1,6 +1,6 @@
 FROM python:slim
 
-WORKDIR /Final-Project-Dev-Ops
+WORKDIR ./
 
 COPY requirements.txt .
 

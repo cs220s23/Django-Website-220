@@ -1,5 +1,4 @@
-docker rm -f server
-docker rm -f website
+docker rm -f django
 # Make sure the data is saved before it is shutdown
 docker exec -it redis redis-cli save
 docker rm -f redis
