@@ -10,6 +10,12 @@ def my_view(request):
     return render(request, "index.html",{'result' : result})
     
 
+def form_submission(request):
+    message = None
+    if request.method == 'POST':
+        message = request.POST.get('message')
+    return render(request, 'data.html', {'message': message})
+
 
 def project_index(request):
     projects = Project.objects.all()
