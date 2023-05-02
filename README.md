@@ -36,6 +36,21 @@ python manage.py runserver
 sudo gunicorn -c conf/gunicorn_config.py personal_portfolio.wsgi
 ```
 
+# How to setup on AWS
+
+```
+sudo apt install git
+git clone https://github.com/cs220s23/Django-Website-220/
+sudo apt install python3-venv
+sudo apt install python3-pip
+sudo apt install mysql-server
+sudo mysql
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'pass';
+ALTER USER 'user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass';
+quit
+```
+
+
 # How to run on AWS
 
 ```
@@ -46,7 +61,12 @@ sudo bash up_aws
 
 
 Django: https://www.djangoproject.com/
+
 Gunicorn: https://gunicorn.org/
+
 AWS: https://aws.amazon.com/
+
 Docker: https://www.docker.com/
+
 Mysql: https://www.mysql.com/
+
