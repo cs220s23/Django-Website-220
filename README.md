@@ -29,12 +29,12 @@ python manage.py runserver
 # How to run with Gunicorn
 
 ```
-gunicorn -c conf/gunicorn_config.py personal_portfolio.wsgi
+sudo gunicorn -c conf/gunicorn_config.py personal_portfolio.wsgi
 ```
 
 # How to run on AWS
 
 ```
-sudo -E /home/ec2-user/Final-Project-Dev-Ops/.venv/bin/gunicorn -c  /home/ec2-user/Final-Project-Dev-Ops/conf/gunicorn_config.py personal_portfolio.wsgi
+sudo bash up_aws
 ```
 
