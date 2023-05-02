@@ -38,16 +38,29 @@ sudo gunicorn -c conf/gunicorn_config.py personal_portfolio.wsgi
 
 # How to setup on AWS
 
+
+Install git, python and mysql
 ```
 sudo apt install git
-git clone https://github.com/cs220s23/Django-Website-220/
 sudo apt install python3-venv
 sudo apt install python3-pip
 sudo apt install mysql-server
+```
+
+Configure mysql
+
+```
 sudo mysql
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'pass';
 ALTER USER 'user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass';
 quit
+```
+
+Clone the repo and populate the database
+
+```
+git clone https://github.com/cs220s23/Django-Website-220/
+python3 mysql/create.py
 ```
 
 
