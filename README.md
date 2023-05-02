@@ -10,6 +10,10 @@ Jeffery Eisenhardt - eisenhardtj
 
 Dermot Badman - Dbad0210
 
+# Overview
+
+This project is a very simple webpage which can query a mysql server and display results.  
+
 # Steps before you run locally
 
 ```
