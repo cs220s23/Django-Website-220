@@ -42,3 +42,11 @@ sudo gunicorn -c conf/gunicorn_config.py personal_portfolio.wsgi
 sudo bash up_aws
 ```
 
+# Technologies used
+
+
+Django: https://www.djangoproject.com/
+Gunicorn: https://gunicorn.org/
+AWS: https://aws.amazon.com/
+Docker: https://www.docker.com/
+Mysql: https://www.mysql.com/
